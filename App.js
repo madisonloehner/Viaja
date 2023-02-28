@@ -1,20 +1,20 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import 'react-native-gesture-handler';
+import React from 'react';
+import { AuthenticatedUserProvider } from './providers/AuthenticatedUserProvider';
+import { SafeAreaProvider } from 'react-native-safe-area-context';
+import RootNavigator from './navigation/RootNav';
+import { LogBox } from 'react-native';
+LogBox.ignoreLogs(['Asyncstorage: ...']); // Ignore log notification by message
+LogBox.ignoreAllLogs(); //Ignore all log notifications
 
 export default function App() {
+
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+    <AuthenticatedUserProvider>
+      <SafeAreaProvider style = {{flex:1}}>
+        <RootNavigator/>
+      </SafeAreaProvider>
+    </AuthenticatedUserProvider>
   );
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});

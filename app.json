@@ -9,7 +9,7 @@
     "splash": {
       "image": "./assets/splash.png",
       "resizeMode": "contain",
-      "backgroundColor": "#ffffff"
+      "backgroundColor": "#E4FEFF"
     },
     "updates": {
       "fallbackToCacheTimeout": 0
@@ -23,11 +23,18 @@
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
-        "backgroundColor": "#FFFFFF"
+        "backgroundColor": "#E4FEFF"
+      },
+      "package": "com.madsforcats.ViajaDissy",
+      "config": {
+        "googleMaps": {
+          "apiKey": "AIzaSyBr2Rhk2vu4b66Q09MZrsRReT8CtnVxWJ0"
+        }
       }
     },
     "web": {
       "favicon": "./assets/favicon.png"
-    }
+    },
+    "description": ""
   }
 }
